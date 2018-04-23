@@ -410,49 +410,51 @@ autocmd FileType python set omnifunc=pythoncomplete#Complete
 "filetype off                   " required!
 
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+"call vundle#rc()
+call plug#begin('~/vim/plugged')
 
 " let Vundle manage Vundle
 " required! 
-Bundle 'gmarik/vundle'
+Plug 'gmarik/vundle'
 
 " My Bundles here:
 "
 " original repos on github
-Bundle 'tpope/vim-fugitive'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'Yggdroot/indentLine'
+Plug 'tpope/vim-fugitive'
+Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plug 'Yggdroot/indentLine'
 let g:indentLine_char = '┊'
 "ndle 'tpope/vim-rails.git'
 " vim-scripts repos
-Bundle 'L9'
-Bundle 'FuzzyFinder'
+Plug 'L9'
+Plug 'FuzzyFinder'
 " non github repos
-Bundle 'https://github.com/wincent/command-t.git'
-Bundle 'Auto-Pairs'
-Bundle 'python-imports.vim'
-Bundle 'CaptureClipboard'
-Bundle 'ctrlp-modified.vim'
-Bundle 'last_edit_marker.vim'
-Bundle 'synmark.vim'
-"Bundle 'Python-mode-klen'
-Bundle 'SQLComplete.vim'
-Bundle 'Javascript-OmniCompletion-with-YUI-and-j'
-"Bundle 'JavaScript-Indent'
-"Bundle 'Better-Javascript-Indentation'
-Bundle 'jslint.vim'
-Bundle "pangloss/vim-javascript"
-Bundle 'Vim-Script-Updater'
-Bundle 'ctrlp.vim'
-Bundle 'tacahiroy/ctrlp-funky'
-Bundle 'jsbeautify'
-Bundle 'The-NERD-Commenter'
+Plug 'https://github.com/wincent/command-t.git'
+Plug 'Auto-Pairs'
+Plug 'python-imports.vim'
+Plug 'CaptureClipboard'
+Plug 'ctrlp-modified.vim'
+Plug 'last_edit_marker.vim'
+Plug 'synmark.vim'
+"Plug 'Python-mode-klen'
+Plug 'SQLComplete.vim'
+Plug 'Javascript-OmniCompletion-with-YUI-and-j'
+"Plug 'JavaScript-Indent'
+"Plug 'Better-Javascript-Indentation'
+Plug 'jslint.vim'
+Plug "pangloss/vim-javascript"
+Plug 'Vim-Script-Updater'
+Plug 'ctrlp.vim'
+Plug 'tacahiroy/ctrlp-funky'
+Plug 'jsbeautify'
+Plug 'The-NERD-Commenter'
 "django
-Bundle 'django_templates.vim'
-Bundle 'Django-Projects'
+Plug 'django_templates.vim'
+Plug 'Django-Projects'
 
-"Bundle 'FredKSchott/CoVim'
-"Bundle 'djangojump'
+"Plug 'FredKSchott/CoVim'
+"Plug 'djangojump'
+call plug#end()
 " ...
 let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
